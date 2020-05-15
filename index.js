@@ -1,3 +1,5 @@
+// ATTRAIT Bastien 
+
 // Q1. Create a variable called `denzel` - that can't be redeclared - and assign it the string 'please denzel, help me'
 
 const denzel = "please denzel, help me";
