@@ -78,7 +78,7 @@ var firstDirector = directors.shift();
 directors.unshift('himself');
 
 // 4. remove "ridleyscott" value from the array and store it in a variable called secondDirector
-var secondDirector = directors.slice(1, 1);
+var secondDirector = directors.splice(1, 1);
 
 // 5. let 'zemeckis' in the array but put a copy of it on a variable called thirdDirector
 var thirdDirector = directors[2];
