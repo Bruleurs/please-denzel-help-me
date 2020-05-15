@@ -109,7 +109,15 @@ const police = function (names) {
 const quotes = ['You will never see the light of... ', 'I run shit around here ', 'King Kong aint got shit on me '];
 
 console.log(police(chorus));
- // ❯ ['You will never see the light of... I am the police', 'I run shit around here I am the police', 'King Kong aint got shit on me I am the police'];
+// ❯ ['You will never see the light of... I am the police', 'I run shit around here I am the police', 'King Kong aint got shit on me I am the police'];
+
+
+const police = (names) => {
+ const results = [];
+ names.forEach(name => results.push(`${name} I am the police`));
+ return results;
+};
+
 
 
 // Q11. Related to the https://www.tvmaze.com/people/66167/denzel-washington link
@@ -117,6 +125,8 @@ console.log(police(chorus));
 
 // Q12. Related to the https://www.tvmaze.com/people/66167/denzel-washington link
 // How many http requests are performed to render the page?
+
+// 20 request if we block the ad
 
 // Q13. Related to the following api call with "curl"
 // ❯ curl "http://api.tvmaze.com/people/6616"
