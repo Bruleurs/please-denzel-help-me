@@ -57,24 +57,43 @@ earlywork = {
 // Q7. Return a new array from `debaters` with all item in uppercase
 const debaters = ['we do', 'what we have to do', 'in order to do', 'what we want to do'];
 
+const debater = [];
+for (let i = 0; i < 4; i++){
+  debater.push(debaters[i].toUpperCase());
+}
+
+
+
 // Q8. Using this array.
 // Do the following 5 steps
 const directors = ['spikelee', 'ridleyscott', 'zemeckis'];
 
 // 1. add "tonyscott" value to the end of `directors` array
+directors.push('tonyscott');
 
 // 2. remove "spikelee" value and store it in a variable called firstDirector
+var firstDirector = directors.shift();
 
 // 3. add "himself" value to the start of `directors` array
+directors.unshift('himself');
 
 // 4. remove "ridleyscott" value from the array and store it in a variable called secondDirector
+var secondDirector = directors.slice(1, 1);
 
 // 5. let 'zemeckis' in the array but put a copy of it on a variable called thirdDirector
+var thirdDirector = directors[2];
 
 
 // Q9. Write the function `duplicate` that return the expected result
 console.log(duplicate(['Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for', 'Every', 'Child']));
 // ❯ ['Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for', 'Every', 'Child', 'Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for', 'Every', 'Child']
+function duplicate(array){
+  const length = array.length;
+  for (let j = 0; j < length; j++){
+    array.push(array[j]);
+  }
+  return array;
+}
 
 
 // Q10. Refactor the current ES5-style function `police` in ES6-style.
@@ -131,11 +150,26 @@ fetch('http://api.tvmaze.com/search/people?q=denzel+washington')
   .then(console.log);
 
 // Q16. Give me at least 3 memorable websites that engage to continue (because of nice UX/UI AND avoid to give me facebook, airbnb etc...)
+//  https://www.pinterest.fr 
+//  https://www.twitch.tv
+//  https://www.reddit.com
 
 // Q17. Describe an ESILV project that you worked on that you’re proud of?
 
+// This project, « Profiling based on multi-clustering », is carried out in collaboration with the NEUMANN company. 
+// The main goal being, for the business, to focus on different groups of clients with a similar profile in order to put forward offers adapted to their own consumer habits.
+// it have been done with R and contribute to increase my skill at this language. And was a first real good profesionnal experience
+// This project have been done in a good team, and it was pleasant and challenging, bringing satisfaction and pride.
+
 // Q18. Describe an ESILV project that you worked on that you’re not so proud of?
+// A project to make an android project, it was a fiasco. Our goal was to make an application, who catch online stock Exchange at crypto money and display them, with news. 
+// But at the end we only be abble to display news. It's not a good project
 
 // Q19. What are some things you like about the developer tools you use?
+// I like when i can test my code fast and see the debuging mode clearly, precisely when the user interface is clear. 
+//In addition it is interesting to have a single developer tool for maximum language
 
 // Q20. Last question: could you explain me - in your terms - why the title of the course is "Web Application Architecture(s)" and not "Web Application Architecture"?
+// On the web, we have a multitude of pages, of sites, which each have different uses and reasons for being. 
+// A single architecture cannot meet the demand of all types of existing sites. 
+// This is why there are several architectures, and it is important not to only see one
